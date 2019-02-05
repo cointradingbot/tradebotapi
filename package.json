@@ -1,0 +1,32 @@
+{
+  "name": "tradebotapi",
+  "version": "1.0.0",
+  "description": "Expose the API of what the bot has processed",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./src/index.js",
+    "compile": "babel ./src --out-dir ./dist --source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cointradingbot/tradebotapi.git"
+  },
+  "author": "Phi Huynh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cointradingbot/tradebotapi/issues"
+  },
+  "homepage": "https://github.com/cointradingbot/tradebotapi#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.9"
+  }
+}
