@@ -1,13 +1,13 @@
 import express from 'express'
+import MatchedTransactions from '../models/matchedTransactionsModel'
 const matchedTransactionsRouter = express.Router()
 
 matchedTransactionsRouter
     .get('/', (req, res) => {
         console.log('matchedtransactions api called')
-        res.json([{
-            id: 123,
-            sellAccount: 'binance',
-            buyAccount: 'bittrex'
-        }])
+        MatchedTransactions.find({}, (error, matchedTransactions) => {
+            res.json(matchedTransactions)
+        })
     })
+
 export default matchedTransactionsRouter
