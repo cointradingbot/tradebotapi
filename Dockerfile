@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get install -y python-certbot-apache -t jessie-backports
 
 WORKDIR /tradebotapi
+VOLUME [ "/tradebotapi/dist/config" ]
 
 COPY package*.json ./
 RUN npm install
